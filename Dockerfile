@@ -29,10 +29,10 @@ ENV PWSH_VERSION=7.3.8
 #         && dotnet --version
 
 
-RUN     cd "$(mktemp -d)" \
-        && wget https://github.com/PowerShell/PowerShell/releases/download/v${PWSH_VERSION}/powershell-${PWSH_VERSION}-linux-x64.tar.gz \
+RUN     wget https://github.com/PowerShell/PowerShell/releases/download/v${PWSH_VERSION}/powershell-${PWSH_VERSION}-linux-x64.tar.gz \
         && tar zxvf powershell-${PWSH_VERSION}-linux-x64.tar.gz -C /usr/bin \
         && chmod +x /usr/bin/pwsh \
+        && rm powershell-${PWSH_VERSION}-linux-x64.tar.gz \
         && pwsh --version
 
 
