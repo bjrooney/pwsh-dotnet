@@ -1,5 +1,5 @@
 # Use the official image as a parent image
-FROM cgr.dev/chainguard/dotnet-sdk:latest
+FROM cgr.dev/chainguard/dotnet-sdk:latest-dev
 
 ###################################
 # Prerequisites
